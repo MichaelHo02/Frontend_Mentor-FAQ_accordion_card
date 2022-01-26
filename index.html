@@ -1,40 +1,132 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- displays site properly based on user's device -->
 
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
-  
+
+  <!-- import font -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap" rel="stylesheet">
+
+
   <title>Frontend Mentor | FAQ Accordion Card</title>
 
-  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
   <style>
-    .attribution { font-size: 11px; text-align: center; }
-    .attribution a { color: hsl(228, 45%, 44%); }
+    :root {
+      /* primary */
+      --primary-text-dark-blue: hsl(238, 29%, 16%);
+      --primary-text-soft-red: hsl(14, 88%, 65%);
+      --primary-bg-gradient-soft-violet: hsl(273, 75%, 66%);
+      --primary-bg-gradient-soft-blue: hsl(240, 73%, 65%);
+      /* neutral */
+      --neutral-text-dark-gray-blue: hsl(237, 12%, 33%);
+      --neutral-text-gray-blue: hsl(240, 6%, 50%);
+      --neutral--divider-light-gray-blue: hsl(240, 5%, 91%);
+    }
+
+    * {
+      padding: 0px;
+      margin: 0px;
+      box-sizing: border-box;
+    }
+
+    html {
+      font-size: 62.5%;
+      font-family: 'Kumbh Sans', sans-serif;
+    }
+
+    p {
+      font-size: 1.2rem;
+      font-weight: 400;
+    }
+
+    body {
+      background: linear-gradient(var(--primary-bg-gradient-soft-violet), var(--primary-bg-gradient-soft-blue));
+    }
+
+    .card {
+      --width: 920px;
+      --height: 509px;
+      width: var(--width);
+      height: var(--height);
+      background-color: white;
+      margin: calc((100vh - var(--height)) / 2) auto;
+      border-radius: 40px;
+      display: grid;
+      grid-template-columns: 50% 50%;
+    }
+
+    .right {
+      grid-row: 1 2;
+    }
+
+    .left {
+      grid-row: 2 3;
+    }
   </style>
 </head>
+
 <body>
-  How many team members can I invite?
-  You can invite up to 2 additional users on the Free plan. There is no limit on 
-  team members for the Premium plan.
+  <div class="card">
+    <div class="left">
+      <img src="./images/illustration-woman-online-desktop.svg" alt="">
+    </div>
+    <div class="right">
+      <div class="title">
+        <h1>FAQ</h1>
+      </div>
 
-  What is the maximum file upload size?
-  No more than 2GB. All files in your account must fit your allotted storage space.
-
-  How do I reset my password?
-  Click “Forgot password” from the login page or “Change password” from your profile page.
-  A reset link will be emailed to you.
-
-  Can I cancel my subscription?
-  Yes! Send us a message and we’ll process your request no questions asked.
-
-  Do you provide additional support?
-  Chat and email support is available 24/7. Phone lines are open during normal business hours.
-
-  <div class="attribution">
-    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-    Coded by <a href="#">Your Name Here</a>.
+      <div class="body">
+        <section class="question">
+          <details>
+            <summary>
+              How many team members can I invite?
+            </summary>
+            You can invite up to 2 additional users on the Free plan. There is no limit on
+            team members for the Premium plan.
+          </details>
+        </section>
+        <section class="question">
+          <details>
+            <summary>
+              What is the maximum file upload size?
+            </summary>
+            No more than 2GB. All files in your account must fit your allotted storage space.
+          </details>
+        </section>
+        <section class="question">
+          <details>
+            <summary>
+              How do I reset my password?
+            </summary>
+            Click “Forgot password” from the login page or “Change password” from your profile page.
+            A reset link will be emailed to you.
+          </details>
+        </section>
+        <section class="question">
+          <details>
+            <summary>
+              Can I cancel my subscription?
+            </summary>
+            Yes! Send us a message and we’ll process your request no questions asked.
+          </details>
+        </section>
+        <section class="question">
+          <details>
+            <summary>
+              Do you provide additional support?
+            </summary>
+            Chat and email support is available 24/7. Phone lines are open during normal business hours.
+          </details>
+        </section>
+      </div>
+    </div>
   </div>
 </body>
+
 </html>
